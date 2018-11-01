@@ -1,0 +1,213 @@
+<!-- Sidebar Header starts -->
+<div class="sidebar-header">
+    <div class="logo clearfix">
+        <a [routerLink]="['/']" class="logo-text float-left">
+            <div class="logo-img">
+                <img src="assets/img/logo.png" />
+            </div>
+            <span class="text align-middle">HESSAPP</span>
+        </a>
+        <a class="nav-close d-block d-md-block d-lg-none d-xl-none" id="sidebarClose" href="javascript:;">
+            <i class="ft-x"></i>
+        </a>
+    </div>
+</div>
+<!-- Sidebar Header Ends -->
+
+<!-- Sidebar Content starts -->
+<div class="sidebar-content">
+    <div class="nav-container">
+            <ul class="navigation">
+                    <li>
+                    <a routerLink="/dashboard/general-status">
+                        <i class="fa fa-home"></i>
+                        <span style="font-size:18px;" class="menu-title">@hs-123456</span>
+                    </a>
+                </li>
+            </ul>
+            <div style="padding: 10px;" class="chat-fixed-search">
+                <form>
+                  <div class="position-relative has-icon-left">
+                    <input class="form-control" id="timesheetinput1" name="employeename" type="text">
+                    <div class="form-control-position">
+                      <i class="ft-user"></i>
+                    </div>
+                    <a routerLink="/dashboard/create-group" style="margin-top: 10px;"  class="d-flex ml-3 btn btn-raised btn-round btn-block gradient-blackberry py-2 width-150 justify-content-center white">Grup Oluştur</a>
+                  </div>
+                </form>
+              </div>
+            <div id="users-list" class="list-group position-relative">
+                    <div class="users-list-padding">
+                      <a class="list-group-item bg-blue-grey bg-lighten-5 border-right-primary border-right-2" routerLink="/dashboard/group/chat">
+                        <span class="media">
+                          <span class="avatar avatar-md avatar-online">
+                            <i></i>
+                          </span>
+                          <div class="media-body">
+                            <h6 class="list-group-item-heading">Elizabeth Elliott
+                              <span class="font-small-3 float-right primary">4:14 AM</span>
+                            </h6>
+                            <p class="list-group-item-text text-muted">
+                              <i class="ft-check primary font-small-2"></i> Okay
+                              <span class="float-right primary">
+                                <i class="font-medium-1 icon-pin blue-grey lighten-3"></i>
+                              </span>
+                            </p>
+                          </div>
+                        </span>
+                      </a>
+                      <a class="list-group-item no-border" (click)="getMessage(5);">
+                        <span class="media">
+                          <span class="avatar avatar-md avatar-busy">
+                            <i></i>
+                          </span>
+                          <div class="media-body">
+                            <h6 class="list-group-item-heading">Kristopher Candy
+                              <span class="font-small-3 float-right primary">9:04 PM</span>
+                            </h6>
+                            <p class="list-group-item-text text-muted">
+                              <i class="ft-check primary font-small-2"></i> Thank you
+                              <span class="float-right 
+                                    primary">
+                                <span class="badge badge-pill badge-primary">12</span>
+                              </span>
+                            </p>
+                          </div>
+                        </span>
+                      </a>
+                      <a class="list-group-item no-border" (click)="SetActive($event,'chat3')">
+                        <span class="media">
+                          <span class="avatar avatar-md avatar-away">
+                            <i></i>
+                          </span>
+                          <div class="media-body">
+                            <h6 class="list-group-item-heading">Sarah Woods
+                              <span class="font-small-3 float-right primary">2:14 AM</span>
+                            </h6>
+                            <p class="list-group-item-text text-muted">
+                              <i class="ft-check font-small-2"></i> Hello krish!
+                              <span class="float-right primary">
+                                <i class="font-medium-1 icon-volume-off blue-grey lighten-3 mr-1"></i>
+                                <span class="badge badge-pill badge-primary">3</span>
+                              </span>
+                            </p>
+                          </div>
+                        </span>
+                      </a>
+                      <a class="list-group-item no-border" (click)="SetActive($event,'chat4')">
+                        <span class="media">
+                          <span class="avatar avatar-md avatar-away">
+                            <i></i>
+                          </span>
+                          <div class="media-body">
+                            <h6 class="list-group-item-heading">Bruce Reid
+                              <span class="font-small-3 float-right primary">Yesterday</span>
+                            </h6>
+                            <p class="list-group-item-text text-muted">
+                              <i class="ft-check font-small-2"></i> Will connect you</p>
+                          </div>
+                        </span>
+                      </a>
+                      <a class="list-group-item no-border" (click)="SetActive($event,'chat5')">
+                        <span class="media">
+                          <span class="avatar avatar-md avatar-online">
+                            <i></i>
+                          </span>
+                          <div class="media-body">
+                            <h6 class="list-group-item-heading">Heather Howell
+                              <span class="font-small-3 float-right primary">Friday</span>
+                            </h6>
+                            <p class="list-group-item-text text-muted">
+                              <i class="ft-check font-small-2"></i> Thank you
+                              <span class="float-right primary">
+                                <span class="badge badge-pill badge-primary">4</span>
+                              </span>
+                            </p>
+                          </div>
+                        </span>
+                      </a>
+                      <a class="list-group-item no-border" (click)="SetActive($event,'chat6')">
+                        <span class="media">
+                          <span class="avatar avatar-md avatar-busy">
+                            <i></i>
+                          </span>
+                          <div class="media-body">
+                            <h6 class="list-group-item-heading">Kelly Reyes
+                              <span class="font-small-3 float-right primary">Thrusday</span>
+                            </h6>
+                            <p class="list-group-item-text text-muted">
+                              <i class="ft-check font-small-2"></i> I love you </p>
+                          </div>
+                        </span>
+                      </a>
+                      <a class="list-group-item no-border" (click)="SetActive($event,'chat7')">
+                        <span class="media">
+                          <span class="avatar avatar-md avatar-online">
+                            <i></i>
+                          </span>
+                          <div class="media-body">
+                            <h6 class="list-group-item-heading">Vincent Nelson</h6>
+                            <p class="list-group-item-text text-muted">
+                              <i class="ft-check primary font-small-2"></i> Who you are?</p>
+                          </div>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+        <ul class="navigation">
+
+            <!-- First level menu -->
+             <li *ngFor="let menuItem of menuItems" [ngClass]="[menuItem.class]" [routerLinkActive]="menuItem.submenu.length != 0 ? '' : 'active'"
+                [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="menuItem.class === '' ? [menuItem.path] : null" *ngIf="!menuItem.isExternalLink; else externalLinkBlock">
+                    <i [ngClass]="[menuItem.icon]"></i>
+                    <span class="menu-title">{{menuItem.title}}</span>
+                    <span *ngIf="menuItem.badge != '' " [ngClass]="[menuItem.badgeClass]">{{menuItem.badge}}</span>
+                </a>
+                <ng-template #externalLinkBlock>
+                    <a [href]="[menuItem.path]" target="_blank">
+                        <i [ngClass]="[menuItem.icon]"></i>
+                        <span class="menu-title">{{menuItem.title}}</span>
+                        <span *ngIf="menuItem.badge != '' " [ngClass]="[menuItem.badgeClass]">{{menuItem.badge}}</span>
+                    </a>
+                </ng-template>
+                <!-- Second level menu -->
+                <ul class="menu-content" *ngIf="menuItem.submenu.length > 0">
+                    <li *ngFor="let menuSubItem of menuItem.submenu" [routerLinkActive]="menuSubItem.submenu.length > 0 ? '' : 'active'" [ngClass]="[menuSubItem.class]">
+                        <a [routerLink]="menuSubItem.submenu.length > 0 ? null : [menuSubItem.path]" *ngIf="!menuSubItem.isExternalLink; else externalSubLinkBlock">
+                            <i [ngClass]="[menuSubItem.icon]"></i>
+                            <span class="menu-title">{{menuSubItem.title}}</span>
+                            <span *ngIf="menuSubItem.badge != '' " [ngClass]="[menuSubItem.badgeClass]">{{menuSubItem.badge}}</span>
+                        </a>
+                        <ng-template #externalSubLinkBlock>
+                            <a [href]="[menuSubItem.path]">
+                                <i [ngClass]="[menuSubItem.icon]"></i>
+                                <span class="menu-title">{{menuSubItem.title}}</span>
+                                <span *ngIf="menuSubItem.badge != '' " [ngClass]="[menuSubItem.badgeClass]">{{menuSubItem.badge}}</span>
+                            </a>
+                        </ng-template>
+                        <!-- Third level menu -->
+                        <ul class="menu-content" *ngIf="menuSubItem.submenu.length > 0">
+                            <li *ngFor="let menuSubsubItem of menuSubItem.submenu" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                                [ngClass]="[menuSubsubItem.class]">
+                                <a [routerLink]="[menuSubsubItem.path]" *ngIf="!menuSubsubItem.isExternalLink; else externalSubSubLinkBlock">
+                                    <i [ngClass]="[menuSubsubItem.icon]"></i>
+                                    <span class="menu-title">{{menuSubsubItem.title}}</span>
+                                    <span *ngIf="menuSubsubItem.badge != '' " [ngClass]="[menuSubsubItem.badgeClass]">{{menuSubsubItem.badge}}</span>
+                                </a>
+                                <ng-template #externalSubSubLinkBlock>
+                                    <a [href]="[menuSubsubItem.path]">
+                                        <i [ngClass]="[menuSubsubItem.icon]"></i>
+                                        <span class="menu-title">{{menuSubsubItem.title}}</span>
+                                        <span *ngIf="menuSubsubItem.badge != '' " [ngClass]="[menuSubsubItem.badgeClass]">{{menuSubsubItem.badge}}</span>
+                                    </a>
+                                </ng-template>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Sidebar Content Ends -->

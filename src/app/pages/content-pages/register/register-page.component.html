@@ -1,0 +1,51 @@
+<!--Login Page Starts-->
+<section id="login">
+    <div class="container-fluid">
+        <div class="row full-height-vh">
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="card card-inverse gradient-indigo-purple text-center width-400">
+                    <div class="card-body">
+                        <div class="card-block">
+                            <h2>Kayıt Ol</h2>
+                            <form novalidate="" (ngSubmit)="onSubmit()" #f="ngForm">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Ad" ngModel required email>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="surname" id="surname" placeholder="Soyad" ngModel required email>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email" ngModel required email>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Şifreniz" ngModel required email>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="password" class="form-control" name="rePass" id="rePass" placeholder="Şifrenizi Tekrar Giriniz." ngModel required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-pink btn-block btn-raised">KAYIT OL</button>
+                                        <button type="button" routerLink="/pages/login" class="btn btn-secondary btn-block btn-raised">GERİ DÖN</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Login Page Ends-->
